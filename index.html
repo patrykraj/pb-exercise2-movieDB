@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Baza filmów</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <main>
+        <div class="menu">
+          <select onChange="filterItemsByYear()">
+            <option disabled>Wybierz rok</option>
+          </select>
+          <button class="btn showAllItemsBtn">Pokaż wszystkie</button>
+          <div class="quantity">
+            <p>
+              Liczba wszystkich filmów w bazie:
+              <span class="nrOfAllMovies"></span>
+            </p>
+            <p>
+              Liczba aktualnie filtrowanych filmów:
+              <span class="nrOfFilteredMovies"></span>
+            </p>
+          </div>
+          <div class="sortBtnsWrapper">
+            <button id="sortAlphabetically" class="btn">
+              Sortuj alfabetycznie
+            </button>
+            <button id="sortByYear" class="btn sortByYear">
+              Sortuj po roku
+            </button>
+          </div>
+          <button id="nightModeBtn" class="nightModeBtn">
+            <i class="material-icons">
+              brightness_4
+            </i>
+          </button>
+        </div>
+        <ul class="main-container"></ul>
+        <div class="tagsList"></div>
+      </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
